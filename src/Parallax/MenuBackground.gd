@@ -9,3 +9,4 @@ func _ready():
 func _process(delta):
 	offset_x -= VELOCITY * delta
 	set_scroll_offset(Vector2(offset_x, 0))
+

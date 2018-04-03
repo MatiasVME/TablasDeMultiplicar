@@ -6,3 +6,4 @@ func _on_Back_pressed():
 func _on_Resume_pressed():
 	get_tree().change_scene("res://src/Levels/Level"
 		+ str(Global.current_level) + ".tscn")
+

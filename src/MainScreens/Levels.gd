@@ -1,7 +1,8 @@
 extends Node2D
 
 func _ready():
-	activate_levels()
+	# activate_levels()
+	pass
 	
 func activate_levels():
 	var levels = get_tree().get_nodes_in_group("Levels")
@@ -52,3 +53,4 @@ func _on_Level9_pressed():
 	Global.num_table = 9	
 	Global.next_disabled = true
 	get_tree().change_scene("res://src/Levels/Level1.tscn")
+

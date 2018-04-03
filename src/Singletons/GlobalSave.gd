@@ -23,8 +23,8 @@ func save_game():
 	
 	savegame.open(fpath, File.WRITE)
 	#savegame.open_encrypted_with_pass(fpath, File.WRITE, OS.get_unique_ID())
-	
-	savegame.store_line(all_data.to_json())
+
+	savegame.store_line(to_json(all_data))
 	
 	savegame.close()
 	
@@ -46,7 +46,7 @@ func load_game():
 	#savegame.open_encrypted_with_pass(fpath, File.WRITE, OS.get_unique_ID())
 	
 	# Se lee linea por linea y se pasa a json
-	dict.parse_json(savegame.get_line())
+	dict = parse_json(savegame.get_line())
 	
 	# Se cierra el fichero
 	savegame.close()

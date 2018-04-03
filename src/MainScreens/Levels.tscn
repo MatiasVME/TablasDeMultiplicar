@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=1]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/MainScreens/Levels.gd" type="Script" id=1]
 [ext_resource path="res://src/Parallax/MenuBackground.tscn" type="PackedScene" id=2]
@@ -34,78 +34,129 @@
 
 [sub_resource type="Animation" id=1]
 
-resource/name = "show"
+resource_name = "show"
 length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Level1:rect/pos")
+tracks/0/path = NodePath("Level1:rect_position")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.2 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( 68, -172 ), Vector2( 68, 108 ) ] }
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 68, -172 ), Vector2( 68, 108 ) ]
+}
 tracks/1/type = "value"
-tracks/1/path = NodePath("Level2:rect/pos")
+tracks/1/path = NodePath("Level2:rect_position")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0.1, 0.3 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( 318, -172 ), Vector2( 318, 108 ) ] }
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 318, -172 ), Vector2( 318, 108 ) ]
+}
 tracks/2/type = "value"
-tracks/2/path = NodePath("Level3:rect/pos")
+tracks/2/path = NodePath("Level3:rect_position")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0.2, 0.4 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( 568, -172 ), Vector2( 568, 108 ) ] }
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 568, -172 ), Vector2( 568, 108 ) ]
+}
 tracks/3/type = "value"
-tracks/3/path = NodePath("Level4:rect/pos")
+tracks/3/path = NodePath("Level4:rect_position")
 tracks/3/interp = 1
 tracks/3/imported = false
-tracks/3/keys = { "times":FloatArray( 0.3, 0.5 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( 818, -172 ), Vector2( 818, 108 ) ] }
+tracks/3/keys = {
+"times": PoolRealArray( 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 818, -172 ), Vector2( 818, 108 ) ]
+}
 tracks/4/type = "value"
-tracks/4/path = NodePath("Level5:rect/pos")
+tracks/4/path = NodePath("Level5:rect_position")
 tracks/4/interp = 1
 tracks/4/imported = false
-tracks/4/keys = { "times":FloatArray( 0.4, 0.6 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( 1058, -172 ), Vector2( 1058, 108 ) ] }
+tracks/4/keys = {
+"times": PoolRealArray( 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 1058, -172 ), Vector2( 1058, 108 ) ]
+}
 tracks/5/type = "value"
-tracks/5/path = NodePath("Level6:rect/pos")
+tracks/5/path = NodePath("Level6:rect_position")
 tracks/5/interp = 1
 tracks/5/imported = false
-tracks/5/keys = { "times":FloatArray( 0.5, 0.7 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( -182, 328 ), Vector2( 68, 328 ) ] }
+tracks/5/keys = {
+"times": PoolRealArray( 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( -182, 328 ), Vector2( 68, 328 ) ]
+}
 tracks/6/type = "value"
-tracks/6/path = NodePath("Level7:rect/pos")
+tracks/6/path = NodePath("Level7:rect_position")
 tracks/6/interp = 1
 tracks/6/imported = false
-tracks/6/keys = { "times":FloatArray( 0.6, 0.8 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( -172, 328 ), Vector2( 318, 328 ) ] }
+tracks/6/keys = {
+"times": PoolRealArray( 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( -172, 328 ), Vector2( 318, 328 ) ]
+}
 tracks/7/type = "value"
-tracks/7/path = NodePath("Level8:rect/pos")
+tracks/7/path = NodePath("Level8:rect_position")
 tracks/7/interp = 1
 tracks/7/imported = false
-tracks/7/keys = { "times":FloatArray( 0.7, 0.9 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( 568, 738 ), Vector2( 568, 328 ) ] }
+tracks/7/keys = {
+"times": PoolRealArray( 0.7, 0.9 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 568, 738 ), Vector2( 568, 328 ) ]
+}
 tracks/8/type = "value"
-tracks/8/path = NodePath("Level9:rect/pos")
+tracks/8/path = NodePath("Level9:rect_position")
 tracks/8/interp = 1
 tracks/8/imported = false
-tracks/8/keys = { "times":FloatArray( 0.8, 1 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( 1298, 328 ), Vector2( 818, 328 ) ] }
+tracks/8/keys = {
+"times": PoolRealArray( 0.8, 1 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 1298, 328 ), Vector2( 818, 328 ) ]
+}
 tracks/9/type = "value"
-tracks/9/path = NodePath("Back:rect/pos")
+tracks/9/path = NodePath("Back:rect_position")
 tracks/9/interp = 1
 tracks/9/imported = false
-tracks/9/keys = { "times":FloatArray( 0.9, 1.1 ), "transitions":FloatArray( 1, 0.25 ), "update":0, "values":[ Vector2( 1298, 328 ), Vector2( 1058, 328 ) ] }
+tracks/9/keys = {
+"times": PoolRealArray( 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 1298, 328 ), Vector2( 1058, 328 ) ]
+}
 
 [node name="Levels" type="Node2D"]
 
-transform/pos = Vector2( 2, 2 )
-z/relative = false
-script/script = ExtResource( 1 )
+position = Vector2( 2, 2 )
+z_as_relative = false
+script = ExtResource( 1 )
 hola = 1
 
 [node name="MenuBackground" parent="." instance=ExtResource( 2 )]
 
+
 [node name="anim" type="AnimationPlayer" parent="."]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
 anims/show = SubResource( 1 )
-playback/active = true
-playback/speed = 1.0
+playback_active = true
+playback_speed = 1.0
 blend_times = [  ]
 autoplay = "show"
 
@@ -113,197 +164,213 @@ autoplay = "show"
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1058.0
-margin/top = 328.0
-margin/right = 1219.0
-margin/bottom = 483.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 1058.0
+margin_top = 328.0
+margin_right = 1219.0
+margin_bottom = 483.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
 
-[node name="Level1" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level1" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 68.0
-margin/top = 108.0
-margin/right = 223.0
-margin/bottom = 263.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 68.0
+margin_top = 108.0
+margin_right = 223.0
+margin_bottom = 263.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 5 )
-textures/pressed = ExtResource( 6 )
-textures/disabled = ExtResource( 7 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_disabled = ExtResource( 7 )
 
-[node name="Level2" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level2" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 318.0
-margin/top = 108.0
-margin/right = 473.0
-margin/bottom = 263.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 318.0
+margin_top = 108.0
+margin_right = 473.0
+margin_bottom = 263.0
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
-textures/pressed = ExtResource( 9 )
-textures/disabled = ExtResource( 10 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_disabled = ExtResource( 10 )
 
-[node name="Level3" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level3" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 568.0
-margin/top = 108.0
-margin/right = 723.0
-margin/bottom = 263.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 568.0
+margin_top = 108.0
+margin_right = 723.0
+margin_bottom = 263.0
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 11 )
-textures/pressed = ExtResource( 12 )
-textures/disabled = ExtResource( 13 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
 
-[node name="Level4" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level4" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 818.0
-margin/top = 108.0
-margin/right = 973.0
-margin/bottom = 263.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 818.0
+margin_top = 108.0
+margin_right = 973.0
+margin_bottom = 263.0
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/disabled = ExtResource( 16 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+texture_disabled = ExtResource( 16 )
 
-[node name="Level5" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level5" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1058.0
-margin/top = 108.0
-margin/right = 1213.0
-margin/bottom = 263.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 1058.0
+margin_top = 108.0
+margin_right = 1213.0
+margin_bottom = 263.0
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 17 )
-textures/pressed = ExtResource( 18 )
-textures/disabled = ExtResource( 19 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 18 )
+texture_disabled = ExtResource( 19 )
 
-[node name="Level6" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level6" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 68.0
-margin/top = 328.0
-margin/right = 223.0
-margin/bottom = 483.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 68.0
+margin_top = 328.0
+margin_right = 223.0
+margin_bottom = 483.0
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 20 )
-textures/pressed = ExtResource( 21 )
-textures/disabled = ExtResource( 22 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 21 )
+texture_disabled = ExtResource( 22 )
 
-[node name="Level7" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level7" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 318.0
-margin/top = 328.0
-margin/right = 473.0
-margin/bottom = 483.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 318.0
+margin_top = 328.0
+margin_right = 473.0
+margin_bottom = 483.0
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 23 )
-textures/pressed = ExtResource( 24 )
-textures/disabled = ExtResource( 25 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_disabled = ExtResource( 25 )
 
-[node name="Level8" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level8" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 568.0
-margin/top = 328.0
-margin/right = 723.0
-margin/bottom = 483.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 568.0
+margin_top = 328.0
+margin_right = 723.0
+margin_bottom = 483.0
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 26 )
-textures/pressed = ExtResource( 27 )
-textures/disabled = ExtResource( 28 )
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_disabled = ExtResource( 28 )
 
-[node name="Level9" type="TextureButton" parent="." groups=[ "Levels" ]]
+[node name="Level9" type="TextureButton" parent="." groups=[
+"Levels",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 818.0
-margin/top = 328.0
-margin/right = 973.0
-margin/bottom = 483.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 818.0
+margin_top = 328.0
+margin_right = 973.0
+margin_bottom = 483.0
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 29 )
-textures/pressed = ExtResource( 30 )
-textures/disabled = ExtResource( 31 )
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 30 )
+texture_disabled = ExtResource( 31 )
 
-[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level1" to="." method="_on_Level1_pressed"]
+[connection signal="pressed" from="Level1" to="." method="_on_Level1_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level2" to="." method="_on_Level2_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_Level2_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level3" to="." method="_on_Level3_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_Level3_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level4" to="." method="_on_Level4_pressed"]
+[connection signal="pressed" from="Level4" to="." method="_on_Level4_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level5" to="." method="_on_Level5_pressed"]
+[connection signal="pressed" from="Level5" to="." method="_on_Level5_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level6" to="." method="_on_Level6_pressed"]
+[connection signal="pressed" from="Level6" to="." method="_on_Level6_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level7" to="." method="_on_Level7_pressed"]
+[connection signal="pressed" from="Level7" to="." method="_on_Level7_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level8" to="." method="_on_Level8_pressed"]
+[connection signal="pressed" from="Level8" to="." method="_on_Level8_pressed" binds=[  ]]
 
-[connection signal="pressed" from="Level9" to="." method="_on_Level9_pressed"]
-
-
+[connection signal="pressed" from="Level9" to="." method="_on_Level9_pressed" binds=[  ]]

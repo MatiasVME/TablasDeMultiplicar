@@ -22,3 +22,4 @@ func _on_Opt2_pressed():
 func _on_Opt3_pressed():
 	Global.reset_opt()
 	Global.opt3_pressed = true
+
