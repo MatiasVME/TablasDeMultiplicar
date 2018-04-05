@@ -20,3 +20,11 @@ func reset_opt():
 	opt1_pressed = false
 	opt2_pressed = false
 	opt3_pressed = false
+
+func _ready():
+	var data = Persistence.get_data()
+
+	if not data.has("MaxLevel"):
+		data["MaxLevel"] = 1
+		
+	Persistence.save_data()

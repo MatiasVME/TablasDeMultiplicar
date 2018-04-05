@@ -1,17 +1,20 @@
 extends Node2D
 
 func _ready():
-	# activate_levels()
+	activate_levels()
 	pass
 	
 func activate_levels():
 	var levels = get_tree().get_nodes_in_group("Levels")
 	var count = 0
 	
-	for i in levels:
+	var data = Persistence.get_data()
+	
+	for i in range(0, levels.size()):
 		count += 1
-		i.set_disabled(false)
-		if count == GlobalSave.all_data["MaxLevel"]:
+#		i.set_disabled(false)
+		levels[i].disabled = false
+		if count == data["MaxLevel"]:
 			break
 
 func _on_Back_pressed():

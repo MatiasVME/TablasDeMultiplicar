@@ -26,30 +26,18 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 10, 15, 20 ),
-"transitions": PoolRealArray( 1, 1, 1, 0.25 ),
+"times": PoolRealArray( 0, 10, 12, 20 ),
+"transitions": PoolRealArray( 1, -4, 1, 0.25 ),
 "update": 0,
 "values": [ Vector2( 10, 710 ), Vector2( 10, -720 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("back:texture_scale")
+tracks/1/path = NodePath("back:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 5.2, 5.3, 5.5 ),
-"transitions": PoolRealArray( 0.25, 0.25, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("back:rect_position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0, 5, 5.2 ),
 "transitions": PoolRealArray( 1, 0.25, 0.25 ),
 "update": 0,
@@ -70,10 +58,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 10.0
-margin_top = -5.0
-margin_right = 1290.0
-margin_bottom = 717.0
+margin_right = 1285.0
+margin_bottom = 724.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -129,10 +115,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1110.0
-margin_top = 730.0
-margin_right = 1265.0
-margin_bottom = 885.0
+margin_left = 1100.0
+margin_top = 540.0
+margin_right = 1255.0
+margin_bottom = 695.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2

@@ -8,6 +8,10 @@
 
 config_version=3
 
+[android]
+
+modules="org/godotengine/godot/GodotAdMob"
+
 [application]
 
 config/name="TablasDeMultiplicar"
@@ -16,9 +20,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Persistence="*res://src/Singletons/Persistence.tscn"
 Global="*res://src/Singletons/Global.gd"
 GlobalMusic="*res://src/Singletons/GlobalMusic.tscn"
-GlobalSave="*res://src/Singletons/GlobalSave.gd"
 
 [display]
 
@@ -29,13 +33,13 @@ window/size/test_height=360
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "PersistenceNode" )
+
 [importer_defaults]
 
 texture={
 "flags/filter": true,
 "flags/mipmaps": true
 }
-
-[rendering]
-
-quality/driver/driver_name="GLES2"

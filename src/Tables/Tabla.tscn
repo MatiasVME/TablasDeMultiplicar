@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Tables/Tabla.gd" type="Script" id=1]
 [ext_resource path="res://src/Parallax/GameBackground.tscn" type="PackedScene" id=2]
@@ -27,24 +27,31 @@ use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
 
-[node name="Tabla" type="Node2D"]
+[node name="Tabla" type="Node2D" index="0"]
 
 position = Vector2( 13.6324, 9.0883 )
 script = ExtResource( 1 )
 
-[node name="GameBackground" parent="." instance=ExtResource( 2 )]
+[node name="GameBackground" parent="." index="0" instance=ExtResource( 2 )]
 
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="Multiplo" type="Label" parent="."]
+[node name="Multiplo" type="Label" parent="." index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 112.0
 margin_top = 113.0
 margin_right = 704.0
 margin_bottom = 613.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -56,16 +63,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="num_grup" type="Label" parent="."]
+[node name="num_grup" type="Label" parent="." index="2"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 753.0
 margin_top = -1.0
 margin_right = 798.0
 margin_bottom = 722.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -88,16 +101,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="num_grup1" type="Label" parent="."]
+[node name="num_grup1" type="Label" parent="." index="3"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 816.0
 margin_top = -1.0
 margin_right = 861.0
 margin_bottom = 722.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -120,16 +139,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_1" type="Label" parent="."]
+[node name="Result_1" type="Label" parent="." index="4"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 40.0
 margin_right = 922.0
 margin_bottom = 102.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -142,16 +167,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_2" type="Label" parent="."]
+[node name="Result_2" type="Label" parent="." index="5"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 102.0
 margin_right = 922.0
 margin_bottom = 164.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -164,16 +195,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_3" type="Label" parent="."]
+[node name="Result_3" type="Label" parent="." index="6"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 164.0
 margin_right = 922.0
 margin_bottom = 226.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -186,16 +223,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_4" type="Label" parent="."]
+[node name="Result_4" type="Label" parent="." index="7"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 236.0
 margin_right = 922.0
 margin_bottom = 298.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -208,16 +251,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_5" type="Label" parent="."]
+[node name="Result_5" type="Label" parent="." index="8"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 298.0
 margin_right = 922.0
 margin_bottom = 360.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -230,16 +279,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_6" type="Label" parent="."]
+[node name="Result_6" type="Label" parent="." index="9"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 360.0
 margin_right = 922.0
 margin_bottom = 422.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -252,16 +307,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_7" type="Label" parent="."]
+[node name="Result_7" type="Label" parent="." index="10"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 426.0
 margin_right = 922.0
 margin_bottom = 488.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -274,16 +335,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_8" type="Label" parent="."]
+[node name="Result_8" type="Label" parent="." index="11"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 492.0
 margin_right = 922.0
 margin_bottom = 554.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -296,16 +363,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_9" type="Label" parent="."]
+[node name="Result_9" type="Label" parent="." index="12"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 554.0
 margin_right = 922.0
 margin_bottom = 616.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -318,16 +391,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Result_10" type="Label" parent="."]
+[node name="Result_10" type="Label" parent="." index="13"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 882.0
 margin_top = 622.0
 margin_right = 922.0
 margin_bottom = 684.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.67451, 0.0470588, 0.0470588, 1 )
 custom_colors/font_color_shadow = Color( 0.419608, 0.0980392, 0.0980392, 1 )
@@ -340,20 +419,32 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Volver" type="TextureButton" parent="."]
+[node name="Volver" type="TextureButton" parent="." index="14"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1116.37
+margin_top = 560.912
+margin_right = 1283.37
+margin_bottom = 721.912
+rect_scale = Vector2( 0.8, 0.8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-margin_left = 1017.0
-margin_top = 506.0
-margin_right = 1184.0
-margin_bottom = 667.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
+_sections_unfolded = [ "Rect" ]
 
-[connection signal="pressed" from="Volver" to="." method="_on_Button_pressed" binds=[  ]]
+[connection signal="pressed" from="Volver" to="." method="_on_Button_pressed"]
+
+

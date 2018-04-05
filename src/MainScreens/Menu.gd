@@ -8,19 +8,46 @@ onready var game_music = GlobalMusic.get_node("Green_Hills")
 
 var load_or_save_one_time = true
 
+# Test AdMob
+var admob = null
+var isReal = true
+var isTop = true
+var adBannerId = "ca-app-pub-7855556025507535/9362038567" # [Replace with your Ad Unit ID and delete this message.]
+#var adInterstitialId = "ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX" # [Replace with your Ad Unit ID and delete this message.]
+#var adRewardedId = "ca-app-pub-7855556025507535/6165029588" # [There is no testing option for rewarded videos, so you can use this id for testing]
+
 func _ready():
 	if Global.music == false:
 		get_node("Sound").set_normal_texture(sonido_off)
 		get_node("Sound").set_pressed_texture(sonido_on)
 		
-	if (load_or_save_one_time):
-		load_or_save_one_time = false
-		
-		if (GlobalSave.file_exist()):
-			GlobalSave.load_game()
-		else:
-			GlobalSave.save_game()
+#	if (load_or_save_one_time):
+#		load_or_save_one_time = false
+#
+#		if (GlobalSave.file_exist()):
+#			GlobalSave.load_game()
+#		else:
+#			GlobalSave.save_game()
 	
+	if(Engine.has_singleton("AdMob")):
+			admob = Engine.get_singleton("AdMob")
+			admob.init(isReal, get_instance_id())
+			loadBanner()
+			#loadInterstitial()
+#			loadRewardedVideo()
+
+func loadBanner():
+	if admob != null:
+		admob.loadBanner(adBannerId, isTop)
+
+#func loadInterstitial():
+#	if admob != null:
+#		admob.loadInterstitial(adInterstitialId)
+#
+#func loadRewardedVideo():
+#	if admob != null:
+#		admob.loadRewardedVideo(adRewardedId)
+
 func _on_Start_pressed():
 	get_tree().change_scene("res://src/MainScreens/Levels.tscn")
 

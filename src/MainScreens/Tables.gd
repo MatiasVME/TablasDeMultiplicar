@@ -1,13 +1,7 @@
 extends Node2D
 
-
-func _ready():
-	pass
-
-
 func _on_volver_pressed():
 	get_tree().change_scene("res://src/MainScreens/Menu.tscn")
-
 
 func _on_Tabla1_pressed():
 	Global.num_table = 1

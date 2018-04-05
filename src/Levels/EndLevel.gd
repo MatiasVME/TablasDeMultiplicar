@@ -9,6 +9,15 @@ func _ready():
 	
 	if Global.next_disabled != false:
 		get_node("Next").modulate.a = 0.0
+	
+	var data = Persistence.get_data()
+
+	print("Global.num_table", Global.num_table)
+	print("data[MaxLevel]", data["MaxLevel"])
+
+	if Global.num_table == data["MaxLevel"]:
+		data["MaxLevel"] += 1
+		Persistence.save_data()
 		
 #	if Global.num_table == GlobalSave.all_data["MaxLevel"]:
 #		GlobalSave.all_data["MaxLevel"] += 1

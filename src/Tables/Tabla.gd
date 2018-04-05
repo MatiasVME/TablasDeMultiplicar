@@ -1,9 +1,5 @@
 extends "GenericTabla.gd"
 
-# class member variables go here, for example:
- 
-# var b = "textvar"
-
 func _ready():
 	set_table(Global.num_table) # setiar la tabla del 1}
 	var result_all = "Result_1"

@@ -5,49 +5,42 @@
 [ext_resource path="res://assets/sounds/Win.ogg" type="AudioStream" id=3]
 [ext_resource path="res://assets/sounds/Lose.ogg" type="AudioStream" id=4]
 
-[node name="GlobalMusic" type="Node"]
+[node name="GlobalMusic" type="Node" index="0"]
 
-
-[node name="Carnivalrides" type="AudioStreamPlayer" parent="."]
+[node name="Carnivalrides" type="AudioStreamPlayer" parent="." index="0"]
 
 stream = ExtResource( 1 )
-playing = false
-loop = true
-volume_db = 0.0
+volume_db = -10.0
+pitch_scale = 1.0
 autoplay = true
-paused = false
-loop_offset = 0.0
-buffering_msec = 500
+mix_target = 0
+bus = "Master"
 
-[node name="Green_Hills" type="AudioStreamPlayer" parent="."]
+[node name="Green_Hills" type="AudioStreamPlayer" parent="." index="1"]
 
 stream = ExtResource( 2 )
-playing = false
-loop = false
-volume_db = 0.0
+volume_db = -10.0
+pitch_scale = 1.0
 autoplay = false
-paused = false
-loop_offset = 0.0
-buffering_msec = 500
+mix_target = 0
+bus = "Master"
 
-[node name="Win" type="AudioStreamPlayer" parent="."]
+[node name="Win" type="AudioStreamPlayer" parent="." index="2"]
 
 stream = ExtResource( 3 )
-playing = false
-loop = false
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
-paused = false
-loop_offset = 0.0
-buffering_msec = 500
+mix_target = 0
+bus = "Master"
 
-[node name="Lose" type="AudioStreamPlayer" parent="."]
+[node name="Lose" type="AudioStreamPlayer" parent="." index="3"]
 
 stream = ExtResource( 4 )
-playing = false
-loop = false
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
-paused = false
-loop_offset = 0.0
-buffering_msec = 500
+mix_target = 0
+bus = "Master"
+
+
