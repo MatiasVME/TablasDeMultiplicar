@@ -1,3 +1,4 @@
 .directory 
 .import/
 export_presets.cfg
+godot-firebase-config.json

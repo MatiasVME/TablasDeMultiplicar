@@ -45,6 +45,13 @@ func _process(delta):
 	
 	if Global.current_stay == 0 and end_level_one_time:
 		end_level_one_time = false
+		
+		randomize()
+		var rand_num = int(round(rand_range(0, 4)))
+		
+		if rand_num <= 1 and Global.firebase != null:
+			Global.firebase.show_interstitial_ad()
+		
 		get_tree().change_scene("res://src/Levels/EndLevel.tscn")
 		
 	if Global.current_incorrect >= 3 and game_over_one_time:
