@@ -1,0 +1,5 @@
+# Renombrar AchievementsIDs.gd.example a AchievementsIDs.gd
+
+extends Object
+
+const ATC = "idhere"

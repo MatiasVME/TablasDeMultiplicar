@@ -17,11 +17,10 @@ func _ready():
 		Global.firebase.show_banner_ad(true)
 		$Message/WelcomeMessage.bbcode_text = Global.firebase.getRemoteValue("welcome_message_1")
 		
-		if $Message/WelcomeMessage.bbcode_text == "" or $WelcomeMessage.bbcode_text == "NULL":
-			$Message/TextBackground.hide()
+		if $Message/WelcomeMessage.bbcode_text == "" or $Message/WelcomeMessage.bbcode_text == "NULL":
+			$Message.hide()
 	else:
-		$Message/TextBackground.hide()
-		$Message/WelcomeMessage.bbcode_text = ""
+		$Message.hide()
 
 func _on_Start_pressed():
 	get_tree().change_scene("res://src/MainScreens/Levels.tscn")
@@ -51,3 +50,10 @@ func _on_Sound_pressed():
 
 func _on_WelcomeMessage_meta_clicked(meta):
 	OS.shell_open(meta)
+
+func _on_PrivacyButton_pressed():
+	get_tree().change_scene("res://src/MainScreens/PrivacyPolicy.tscn")
+
+func _on_Clock_pressed():
+	get_tree().change_scene("res://src/MiniGames/AgainstTheClock/Game.tscn")
+

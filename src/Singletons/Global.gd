@@ -1,14 +1,14 @@
 extends Node
 
-const DATA_VERSION = 1
+const DATA_VERSION = 2
 
-var debug = true
-var version = "2.1.0"
+var debug = false
+var version = "2.2.1"
 
 var current_user
 
 var current_level = 1
-var current_points = 0
+var current_points = 0 # Para contra el reloj
 var current_correct = 0
 var current_incorrect = 0
 var current_stay = 0
@@ -24,6 +24,7 @@ var opt2_pressed = false
 var opt3_pressed = false
 
 var firebase
+#var google
 var data
 
 func reset_opt():
@@ -32,15 +33,6 @@ func reset_opt():
 	opt3_pressed = false
 
 func _ready():
-#	var data = Persistence.get_data()
-#
-#	if not data.has("MaxLevel"):
-#		data["MaxLevel"] = 1
-#
-#	Persistence.save_data()
-#
-#	firebase_config()
-
 	# Para tests
 	if debug:
 #		Persistence.remove_all_data()
@@ -78,10 +70,18 @@ func _ready():
 			all_data_config()
 	
 	Persistence.save_data(current_user)
+	
+#	if data["AcceptPrivacyPolicy"]:
+#		google_play_service()
 
 func get_current_user():
 	if data["AcceptPrivacyPolicy"]:
 		pass
+
+#func google_play_service():
+#	if OS.get_name() == "Android":
+#		google = Engine.get_singleton("GooglePlay")
+#		google.init(get_instance_id())
 
 func all_data_config():
 	firebase_config()
@@ -102,6 +102,11 @@ func create_data_if_not_exist():
 		data["MaxLevel"] = 1
 		# against the clock = ATC
 		data["ATCScoreRecord"] = 0
+#		data["UseGooglePlayService"] = false
 		
-		
-		
+		Persistence.save_data(current_user)
+
+#func _receive_message(from, key, datax):
+#	if from == "GooglePlay":
+##		print("Key: ", key, " Data: ", datax)
+#		pass

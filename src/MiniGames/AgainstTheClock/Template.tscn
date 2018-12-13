@@ -1,0 +1,289 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/MiniGames/AgainstTheClock/Template.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/buttons/tablas/volver-normal.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/buttons/tablas/volver-press.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/Lobster/Lobster-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/images/buttons/btn-normal.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/buttons/btn-click.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 50
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 120
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 70
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+
+[node name="Template" type="Node2D" index="0"]
+script = ExtResource( 1 )
+
+[node name="ExitLevel" type="TextureButton" parent="." index="0"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 102.0
+margin_right = 175.0
+margin_bottom = 258.0
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Points" type="Label" parent="." index="1"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 83.0
+margin_right = 618.0
+margin_bottom = 203.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.198303, 0.241573, 0.890625, 1 )
+custom_colors/font_color_shadow = Color( 0.295898, 0.313637, 0.75, 1 )
+text = "Puntos: 0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Time" type="Label" parent="." index="2"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 731.0
+margin_top = 83.0
+margin_right = 1240.0
+margin_bottom = 203.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.198303, 0.241573, 0.890625, 1 )
+custom_colors/font_color_shadow = Color( 0.295898, 0.313637, 0.75, 1 )
+text = "Time: 60"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Display" type="Label" parent="." index="3"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 160.0
+margin_right = 1280.0
+margin_bottom = 530.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.675781, 0.0501556, 0.0501556, 1 )
+custom_colors/font_color_shadow = Color( 0.421875, 0.098877, 0.098877, 1 )
+text = "99 x 99"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Opt1" type="TextureButton" parent="." index="4"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 330.0
+margin_top = 530.0
+margin_right = 520.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Num" type="Label" parent="Opt1" index="0"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 190.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00256348, 0.65625, 0.120023, 1 )
+custom_colors/font_color_shadow = Color( 0.0626123, 0.414062, 0.059845, 1 )
+text = "99"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Opt2" type="TextureButton" parent="." index="5"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 550.0
+margin_top = 530.0
+margin_right = 740.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Num" type="Label" parent="Opt2" index="0"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 190.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00256348, 0.65625, 0.120023, 1 )
+custom_colors/font_color_shadow = Color( 0.0626123, 0.414062, 0.059845, 1 )
+text = "99"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Opt3" type="TextureButton" parent="." index="6"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 770.0
+margin_top = 530.0
+margin_right = 960.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Num" type="Label" parent="Opt3" index="0"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 190.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00256348, 0.65625, 0.120023, 1 )
+custom_colors/font_color_shadow = Color( 0.0626123, 0.414062, 0.059845, 1 )
+text = "99"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="ExitLevel" to="." method="_on_ExitLevel_pressed"]
+[connection signal="pressed" from="Opt1" to="." method="_on_Opt1_pressed"]
+[connection signal="pressed" from="Opt2" to="." method="_on_Opt2_pressed"]
+[connection signal="pressed" from="Opt3" to="." method="_on_Opt3_pressed"]

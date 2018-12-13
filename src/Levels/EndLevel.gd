@@ -9,20 +9,20 @@ func _ready():
 	
 	if Global.next_disabled != false:
 		get_node("Next").modulate.a = 0.0
-	
-	var data = Persistence.get_data()
 
 	print("Global.num_table", Global.num_table)
-	print("data[MaxLevel]", data["MaxLevel"])
+	print("data[MaxLevel]", Global.data["MaxLevel"])
 
-	if Global.num_table == data["MaxLevel"]:
-		data["MaxLevel"] += 1
+	if Global.num_table == Global.data["MaxLevel"]:
+		Global.data["MaxLevel"] += 1
 		Persistence.save_data()
 		
-#	if Global.num_table == GlobalSave.all_data["MaxLevel"]:
-#		GlobalSave.all_data["MaxLevel"] += 1
-#		GlobalSave.save_game()
-
+	randomize()
+	var rand_num = int(round(rand_range(0, 3)))
+	
+	if rand_num <= 1 and Global.firebase != null:
+		Global.firebase.show_interstitial_ad()
+		
 func _on_Back_pressed():
 	get_tree().change_scene("res://src/MainScreens/Levels.tscn")
 

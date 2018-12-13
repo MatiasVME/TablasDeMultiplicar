@@ -14,7 +14,7 @@ func activate_levels():
 		count += 1
 #		i.set_disabled(false)
 		levels[i].disabled = false
-		if count == data["MaxLevel"]:
+		if count == Global.data["MaxLevel"]:
 			break
 
 func _on_Back_pressed():

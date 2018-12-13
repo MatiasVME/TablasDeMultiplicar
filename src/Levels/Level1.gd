@@ -13,7 +13,7 @@ var end_level_one_time = true
 var game_over_one_time = true
 
 func _ready():
-	set_table(Global.num_table) # setiar la tabla del 1}
+	set_table(Global.num_table) # setiar la tabla del 1
 	Global.current_level = 1
 	Global.current_correct = 0
 	Global.current_incorrect = 0
@@ -43,15 +43,9 @@ func _process(delta):
 		evaluate_result(opt)
 		show_new_problem()
 	
-	if Global.current_stay == 0 and end_level_one_time:
+	if Global.current_correct >= 20 and end_level_one_time:
 		end_level_one_time = false
-		
-		randomize()
-		var rand_num = int(round(rand_range(0, 4)))
-		
-		if rand_num <= 1 and Global.firebase != null:
-			Global.firebase.show_interstitial_ad()
-		
+
 		get_tree().change_scene("res://src/Levels/EndLevel.tscn")
 		
 	if Global.current_incorrect >= 3 and game_over_one_time:

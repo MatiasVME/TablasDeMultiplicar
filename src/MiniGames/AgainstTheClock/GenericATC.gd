@@ -19,14 +19,11 @@ const NEARNESS = 5
 func _ready():
 	randomize()
 
-func set_table(table):
-	num1 = table
-
 func new_problem():
-	while past_result == num2*num1: # Multiplico num2*num1 para que entre e el while
-		num2 = round(randf() * 10)
+	num1 = int(round(rand_range(1, 9)))
+	num2 = int(round(rand_range(1, 9)))
+
 	result = num1 * num2
-	past_result = result
 
 func generate_answers():
 	# Definir el rango de de las falsas alternativas (falt)
@@ -61,11 +58,13 @@ func evaluate_result(opt):
 		Global.current_correct += 1
 		if Global.music:
 			win_sound.play()
+		Global.current_points += 10
 	else:
 		Global.current_incorrect += 1
 		if Global.music:
 			lose_sound.play()
-	Global.current_stay -= 1
+		Global.current_points -= 20
+
 	Global.reset_opt()
 	
 func num_rand(num, c):

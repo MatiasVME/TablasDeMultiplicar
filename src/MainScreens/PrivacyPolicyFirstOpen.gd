@@ -5,6 +5,7 @@ func _on_Accept_pressed():
 	Persistence.save_data(Global.current_user)
 	
 	Global.all_data_config()
+#	Global.google_play_service()
 	
 	get_tree().change_scene("res://src/MainScreens/Menu.tscn")
 
