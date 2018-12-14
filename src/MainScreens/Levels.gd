@@ -8,7 +8,9 @@ func activate_levels():
 	var levels = get_tree().get_nodes_in_group("Levels")
 	var count = 0
 	
-	var data = Persistence.get_data()
+	if not Global.data.has("MaxLevel"):
+		Global.data["MaxLevel"] = 1
+		Persistence.save_data()
 	
 	for i in range(0, levels.size()):
 		count += 1

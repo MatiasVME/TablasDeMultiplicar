@@ -13,15 +13,6 @@ func _ready():
 		get_node("Sound").set_normal_texture(sonido_off)
 		get_node("Sound").set_pressed_texture(sonido_on)
 		
-	if Global.firebase != null:
-		Global.firebase.show_banner_ad(true)
-		$Message/WelcomeMessage.bbcode_text = Global.firebase.getRemoteValue("welcome_message_1")
-		
-		if $Message/WelcomeMessage.bbcode_text == "" or $Message/WelcomeMessage.bbcode_text == "NULL":
-			$Message.hide()
-	else:
-		$Message.hide()
-
 func _on_Start_pressed():
 	get_tree().change_scene("res://src/MainScreens/Levels.tscn")
 

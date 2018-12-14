@@ -1,11 +1,9 @@
 extends Node
 
-const DATA_VERSION = 2
+const DATA_VERSION = 0
 
-var debug = false
-var version = "2.2.1"
-
-var current_user
+var debug = true
+var version = "2.3.0"
 
 var current_level = 1
 var current_points = 0 # Para contra el reloj
@@ -23,7 +21,7 @@ var opt1_pressed = false
 var opt2_pressed = false
 var opt3_pressed = false
 
-var firebase
+#var firebase
 #var google
 var data
 
@@ -36,15 +34,11 @@ func _ready():
 	# Para tests
 	if debug:
 #		Persistence.remove_all_data()
-		Persistence.mode = Persistence.MODE_TEXT
+		Persistence.mode = Persistence.Mode.MODE_TEXT
 	else:
-		Persistence.mode = Persistence.MODE_ENCRYPTED
+		Persistence.mode = Persistence.Mode.MODE_ENCRYPTED
 		
-	# Método que obtiene el usuario dependiendo si esta logeado o no, o si
-	# a aceptado las políticas de privacidad.
-	# current_user = get_current_user()  
-	
-	data = Persistence.get_data(current_user)
+	data = Persistence.get_data()
 
 	# Tiene data version
 	if data.has("DataVersion"):
@@ -52,7 +46,7 @@ func _ready():
 			Persistence.remove_all_data()
 			
 			data["DataVersion"] = DATA_VERSION
-			Persistence.save_data(current_user)
+			Persistence.save_data()
 			
 			get_tree().quit()
 		else:
@@ -69,44 +63,15 @@ func _ready():
 		elif data["AcceptPrivacyPolicy"]:
 			all_data_config()
 	
-	Persistence.save_data(current_user)
-	
-#	if data["AcceptPrivacyPolicy"]:
-#		google_play_service()
-
-func get_current_user():
-	if data["AcceptPrivacyPolicy"]:
-		pass
-
-#func google_play_service():
-#	if OS.get_name() == "Android":
-#		google = Engine.get_singleton("GooglePlay")
-#		google.init(get_instance_id())
+	Persistence.save_data()
 
 func all_data_config():
-	firebase_config()
 	create_data_if_not_exist()
-
-func firebase_config():
-	if OS.get_name() == "Android":
-		firebase = Engine.get_singleton("FireBase")
-		var file = File.new()
-		file.open("res://godot-firebase-config.json", file.READ)
-		var content = file.get_as_text()
-		file.close()
-		
-		firebase.init(content, get_instance_id())
 		
 func create_data_if_not_exist():
 	if not data.has("ATCScoreRecord"):
 		data["MaxLevel"] = 1
 		# against the clock = ATC
 		data["ATCScoreRecord"] = 0
-#		data["UseGooglePlayService"] = false
 		
-		Persistence.save_data(current_user)
-
-#func _receive_message(from, key, datax):
-#	if from == "GooglePlay":
-##		print("Key: ", key, " Data: ", datax)
-#		pass
+		Persistence.save_data()

@@ -2,7 +2,7 @@ extends Node
 
 func _on_Accept_pressed():
 	Global.data["AcceptPrivacyPolicy"] = true
-	Persistence.save_data(Global.current_user)
+	Persistence.save_data()
 	
 	Global.all_data_config()
 #	Global.google_play_service()

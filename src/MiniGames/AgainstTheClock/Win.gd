@@ -6,20 +6,23 @@ onready var points = get_node("Some/Points")
 onready var record = get_node("Some/Record")
 
 func _ready():
+	if not Global.data.has("ATCScoreRecord"):
+		Global.data["ATCScoreRecord"] = 0
+	
 	if Global.data["ATCScoreRecord"] < Global.current_points:
 		Global.data["ATCScoreRecord"] = Global.current_points
-		Persistence.save_data(Global.current_user)
+		Persistence.save_data()
 		
 #	if Global.google != null:
 #		Global.google.submit_leaderboard(int(Global.data["ATCScoreRecord"]), AID)
 		
-	randomize()
-	var rand_num = int(round(rand_range(0, 3)))
+#	randomize()
+#	var rand_num = int(round(rand_range(0, 3)))
+#
+#	if rand_num <= 1 and Global.firebase != null:
+#		Global.firebase.show_interstitial_ad()
 	
-	if rand_num <= 1 and Global.firebase != null:
-		Global.firebase.show_interstitial_ad()
-	
-	points.set_text(str("Puntos: ", Global.current_points))
+	points.set_text(str("Points: ", Global.current_points))
 	record.set_text(str("Record: ", Global.data["ATCScoreRecord"]))
 	
 func _on_Back_pressed():
