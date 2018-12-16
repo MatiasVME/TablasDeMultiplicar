@@ -2,7 +2,7 @@ extends Node
 
 const DATA_VERSION = 0
 
-var debug = true
+var debug = false
 var version = "2.3.0"
 
 var current_level = 1
@@ -31,6 +31,8 @@ func reset_opt():
 	opt3_pressed = false
 
 func _ready():
+#	TranslationServer.set_locale("en")
+	
 	# Para tests
 	if debug:
 #		Persistence.remove_all_data()
@@ -49,19 +51,20 @@ func _ready():
 			Persistence.save_data()
 			
 			get_tree().quit()
-		else:
-			if not data.has("AcceptPrivacyPolicy"):
-				data["AcceptPrivacyPolicy"] = false
-			else:
-				all_data_config()
+#		else:
+#			if not data.has("AcceptPrivacyPolicy"):
+#				data["AcceptPrivacyPolicy"] = true # antes estaba en false
+#			else:
+#				all_data_config()
 	# No hay data version es un nuevo usuario o un usuario antiguo
 	else:
 		data["DataVersion"] = DATA_VERSION
 		
-		if not data.has("AcceptPrivacyPolicy"):
-			data["AcceptPrivacyPolicy"] = false
-		elif data["AcceptPrivacyPolicy"]:
-			all_data_config()
+#		if not data.has("AcceptPrivacyPolicy"):
+#			data["AcceptPrivacyPolicy"] = true # antes estaba en false
+#		elif data["AcceptPrivacyPolicy"]:
+	
+	all_data_config()
 	
 	Persistence.save_data()
 

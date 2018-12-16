@@ -13,6 +13,10 @@ func _ready():
 		get_node("Sound").set_normal_texture(sonido_off)
 		get_node("Sound").set_pressed_texture(sonido_on)
 		
+	$Tables/TablesLabel.text = tr("TABLES")
+	$Start/StartLabel.text = tr("START")
+	$Clock/StartLabel.text = tr("TIME_TRIAL")
+		
 func _on_Start_pressed():
 	get_tree().change_scene("res://src/MainScreens/Levels.tscn")
 

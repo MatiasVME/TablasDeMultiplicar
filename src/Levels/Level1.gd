@@ -61,13 +61,13 @@ func show_opts():
 	opt3_text.set_text(str(opts[2]))
 	
 func show_correct():
-	correct.set_text(str("Correctas: ", Global.current_correct))
+	correct.set_text(str(tr("CORRECT"), ": ", Global.current_correct))
 
 func show_incorrect():
-	incorrect.set_text(str("Incorrectas: ", Global.current_incorrect))
+	incorrect.set_text(str(tr("INCORRECT"), ": ", Global.current_incorrect))
 	
 func show_stay():
-	stay.set_text(str("Quedan: ", Global.current_stay))
+	stay.set_text(str(tr("STAY"), ": ", Global.current_stay))
 	
 func show_new_problem():
 	new_problem()

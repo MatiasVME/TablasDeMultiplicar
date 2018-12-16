@@ -15,9 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="TablasDeMultiplicar"
+config/name="TablasDeMultiplicarPremium"
 run/main_scene="res://src/MainScreens/Splash.tscn"
-config/icon="res://icon.png"
+config/icon="res://iconv2.png"
 
 [autoload]
 

@@ -22,8 +22,8 @@ func _ready():
 #	if rand_num <= 1 and Global.firebase != null:
 #		Global.firebase.show_interstitial_ad()
 	
-	points.set_text(str("Points: ", Global.current_points))
-	record.set_text(str("Record: ", Global.data["ATCScoreRecord"]))
+	points.set_text(str(tr("POINTS"), ": ", Global.current_points))
+	record.set_text(str(tr("RECORD"), ": ", Global.data["ATCScoreRecord"]))
 	
 func _on_Back_pressed():
 	get_tree().change_scene("res://src/MainScreens/Menu.tscn")

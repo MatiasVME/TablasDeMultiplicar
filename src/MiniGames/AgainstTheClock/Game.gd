@@ -63,7 +63,7 @@ func show_opts():
 	opt3_text.set_text(str(opts[2]))
 	
 func show_points():
-	points.text = str("Puntos: ", Global.current_points)
+	points.text = str(tr("POINTS"), ": ", Global.current_points)
 	
 func show_new_problem():
 	new_problem()
@@ -76,7 +76,7 @@ func show_new_problem():
 func _on_Timer_timeout():
 	time_acum += 1
 	
-	time.text = str("Tiempo: ", MAX_TIME - time_acum)
+	time.text = str(tr("TIME"), ": ", MAX_TIME - time_acum)
 	
 	if time_acum >= MAX_TIME:
 		get_tree().change_scene("res://src/MiniGames/AgainstTheClock/Win.tscn")

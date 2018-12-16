@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	$GameOver.text = tr("GAME_OVER")
+
 func _on_Back_pressed():
 	get_tree().change_scene("res://src/MainScreens/Levels.tscn")
 

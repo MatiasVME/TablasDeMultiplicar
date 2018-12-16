@@ -1,1 +1,11 @@
 id,en,es,it,ja,ar,de,ko,ru
+TABLES,Tables,Tablas,Tabelle,テーブル,الجداول,Tabellen,테이블,таблицы
+START,Start,Empezar,Inizio,開始,بداية,Start,스타트,Начните
+TIME_TRIAL,Time Trial,Contra el Reloj,Contro il tempo,タイムトライアル,الوقت التجريبي,Zeitfahren,시간 재판,Пробный период
+CORRECT,Correct,Correctas,Corretto,正しい,صيح,Richtig,옳은,Правильный
+INCORRECT,Incorrect,Incorrectas,Errato,間違った,غير صحيح,Falsch,잘못된,некорректный
+STAY,Stay,Quedan,Soggiorno,滞在,البقاء,Bleibe,머무르다,Остаться
+GAME_OVER,Game Over,Has perdido,Game Over,ゲームオーバー,انتهت اللعبة,Spiel ist aus,게임 끝,Игра окончена
+POINTS,Points,Puntos,Punti,ポイント,نقاط,Punkte,전철기,Точки
+TIME,Time,Tiempo,Tempo,時間,زمن,Zeit,시각,Время
+RECORD,Record,Récord,Record,記録,سجل,Aufzeichnung,기록,запись

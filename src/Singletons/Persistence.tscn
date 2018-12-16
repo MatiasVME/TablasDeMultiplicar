@@ -8,8 +8,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_editor_icon": ExtResource( 2 )
 }
-mode = 1
 password = "123321"
 folder_name = "TablasSave"
-debug = true
 

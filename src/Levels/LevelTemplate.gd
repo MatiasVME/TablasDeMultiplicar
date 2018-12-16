@@ -7,6 +7,7 @@ func _ready():
 	if Global.music:
 		menu_music.stop()
 		game_music.play()
+		
 
 func _on_ExitLevel_pressed():
 	get_tree().change_scene("res://src/MainScreens/Levels.tscn")

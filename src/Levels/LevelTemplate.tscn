@@ -43,7 +43,7 @@ size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.198303, 0.241573, 0.890625, 1 )
 custom_colors/font_color_shadow = Color( 0.295898, 0.313637, 0.75, 1 )
-text = "Correctas: 99"
+text = "Correct: 99"
 align = 1
 valign = 1
 
@@ -56,7 +56,7 @@ size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.198303, 0.241573, 0.890625, 1 )
 custom_colors/font_color_shadow = Color( 0.295898, 0.313637, 0.75, 1 )
-text = "Incorrectas: 99"
+text = "Incorrect: 99"
 align = 1
 valign = 1
 
@@ -69,7 +69,7 @@ size_flags_vertical = 0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.198303, 0.241573, 0.890625, 1 )
 custom_colors/font_color_shadow = Color( 0.295898, 0.313637, 0.75, 1 )
-text = "Quedan: 99"
+text = "Stay: 99"
 align = 1
 valign = 1
 
